@@ -1,0 +1,16 @@
+en:
+  layouts:
+    footer:
+      decide: Decide Manza
+      decide_description: template
+      faq: Questions and Responses
+      faq_description: template
+      links: Links
+      manza: Manzanares Del real
+      manza_link: https://manzanareselreal.es/
+      manza_transparency: Transparency
+      manza_transparency_link: https://manzanareselreal.sedelectronica.es/transparency
+      manza_citizen_participation: Citizen Participation Rules
+      manza_citizen_participation_link:
+      Participatory_budgeting: Participatory Budgeting
+      Participatory_budgeting_link:

@@ -1,0 +1,16 @@
+es:
+  layouts:
+    footer:
+      decide: Decide Manza
+      decide_description: template
+      faq: Preguntas y respuestas
+      faq_description: template
+      links: Enlaces de interes
+      manza: Manzanares Del real
+      manza_link: https://manzanareselreal.es/
+      manza_transparency: Transparencia
+      manza_transparency_link: https://manzanareselreal.sedelectronica.es/transparency
+      manza_citizen_participation: Reglamento de participacion ciudadana
+      manza_citizen_participation_link:
+      Participatory_budgeting: Presupuestos Abiertos
+      Participatory_budgeting_link:
