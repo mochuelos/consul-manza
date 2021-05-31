@@ -10,3 +10,21 @@
 .top-links {
   display: none;
 }
+
+.jumbo.highlight {
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 7.5rem 0;
+  background-position: center;
+}
+
+.home-page {
+  h2,
+  h3 {
+    &.title {
+      @include breakpoint(medium) {
+        min-width: auto;
+      }
+    }
+  }
+}
