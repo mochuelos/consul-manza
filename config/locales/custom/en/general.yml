@@ -4,9 +4,11 @@ en:
       decide: Decide Manza
       decide_description: template
       decide_link: decide link
+      decide_link_title: Decide
       faq: Questions and Responses
       faq_description: template
       faq_link: faq link
+      faq_link_title: faq
       links: Links
       manza: Manzanares Del real
       manza_link: https://manzanareselreal.es/
