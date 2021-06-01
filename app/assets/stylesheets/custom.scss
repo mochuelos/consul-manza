@@ -2,29 +2,17 @@
 // Read more on documentation:
 // * English: https://github.com/consul/consul/blob/master/CUSTOMIZE_EN.md#css
 // * Spanish: https://github.com/consul/consul/blob/master/CUSTOMIZE_ES.md#css
-//
+
+@import "manza/custom_fixes";
+@import "manza/custom_mixins";
+@import "manza/custom_buttons";
+@import "manza/custom_header";
+
+// Minor Changes
 .footer {
   min-height: auto;
 }
 
 .top-links {
   display: none;
-}
-
-.jumbo.highlight {
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 7.5rem 0;
-  background-position: center;
-}
-
-.home-page {
-  h2,
-  h3 {
-    &.title {
-      @include breakpoint(medium) {
-        min-width: auto;
-      }
-    }
-  }
 }

@@ -1,0 +1,10 @@
+.home-page {
+  h2,
+  h3 {
+    &.title {
+      @include breakpoint(medium) {
+        min-width: auto;
+      }
+    }
+  }
+}

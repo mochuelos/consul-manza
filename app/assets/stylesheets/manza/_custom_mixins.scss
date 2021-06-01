@@ -1,0 +1,8 @@
+@mixin inverted-selection {
+
+  &::selection,
+  *::selection {
+    background-color: rgba($white, 0.99);
+    color: $azur;
+  }
+}

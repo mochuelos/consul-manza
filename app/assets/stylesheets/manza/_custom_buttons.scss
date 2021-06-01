@@ -1,0 +1,14 @@
+.button {
+  @extend %button;
+  @include inverted-selection;
+  background: $azur;
+
+  &.warning,
+  &.warning:hover {
+    color: #000;
+  }
+
+  &.medium {
+    font-size: $small-font-size;
+  }
+}

@@ -2,8 +2,21 @@
 // Read more on documentation:
 // * English: https://github.com/consul/consul/blob/master/CUSTOMIZE_EN.md#css
 // * Spanish: https://github.com/consul/consul/blob/master/CUSTOMIZE_ES.md#css
-//
-$brand: #007A4D;
+
+// MANZANARES COLORS
+$sinople: #007A4D;
+$gules: #CD202C;
+$oro: #FFB652;
+$azur: #002395;
+$sable: #000;
+
+// OVERRIDE COLORS
+$brand: $sinople;
 $brand-secondary: darken($brand, 10%);
 $dark: $brand-secondary;
-$body-font-family: 'Trebuchet MS', sans-serif;
+$info-bg: $white;
+$info-border: $white;
+$color-info: $sable;
+
+// FONTS
+$body-font-family: 'Trebuchet','Trebuchet MS',Helvetica,Arial,Lucida,sans-serif;
