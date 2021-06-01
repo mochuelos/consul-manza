@@ -3,4 +3,7 @@
   background-repeat: no-repeat;
   padding: 7.5rem 0;
   background-position: center;
+  h1, .lead {
+    color: $white;
+  }
 }

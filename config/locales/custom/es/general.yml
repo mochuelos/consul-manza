@@ -3,8 +3,10 @@ es:
     footer:
       decide: Decide Manza
       decide_description: template
+      decide_link: decide link
       faq: Preguntas y respuestas
       faq_description: template
+      faq_link: faq link
       links: Enlaces de interes
       manza: Manzanares Del real
       manza_link: https://manzanareselreal.es/
