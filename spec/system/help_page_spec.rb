@@ -10,7 +10,7 @@ describe "Help page" do
 
       expect(page).to have_link "Help"
 
-      within("#navigation_bar") do
+      within(".subfooter") do
         click_link "Help"
       end
 
@@ -31,7 +31,7 @@ describe "Help page" do
     Setting["feature.sdg"] = true
 
     visit root_path
-    within("#navigation_bar") do
+    within(".subfooter") do
       click_link "Help"
     end
 
@@ -42,7 +42,7 @@ describe "Help page" do
     Setting["feature.sdg"] = nil
 
     visit root_path
-    within("#navigation_bar") do
+    within(".subfooter") do
       click_link "Help"
     end
 
