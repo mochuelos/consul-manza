@@ -63,6 +63,9 @@ gem "view_component", "~> 2.19.1", require: "view_component/engine"
 gem "whenever", "~> 1.0.0", require: false
 gem "wicked_pdf", "~> 2.1.0"
 gem "wkhtmltopdf-binary", "~> 0.12.4"
+# xlsx to csv
+gem "roo", "~> 2.8.0"
+gem "rubyXL"
 
 source "https://rails-assets.org" do
   gem "rails-assets-leaflet"

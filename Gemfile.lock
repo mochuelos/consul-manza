@@ -510,6 +510,9 @@ GEM
     rexml (3.2.4)
     rinku (2.0.6)
     rollbar (3.0.1)
+    roo (2.8.3)
+      nokogiri (~> 1)
+      rubyzip (>= 1.3.0, < 3.0.0)
     rspec-core (3.9.2)
       rspec-support (~> 3.9.3)
     rspec-expectations (3.9.2)
@@ -548,6 +551,9 @@ GEM
       rubocop (>= 0.68.1)
     ruby-progressbar (1.10.1)
     ruby2_keywords (0.0.4)
+    rubyXL (3.4.17)
+      nokogiri (>= 1.10.8)
+      rubyzip (>= 1.3.0)
     rubyzip (2.3.0)
     rugged (1.0.1)
     rvm1-capistrano3 (1.4.0)
@@ -753,11 +759,13 @@ DEPENDENCIES
   responders (~> 3.0.1)
   rinku (~> 2.0.6)
   rollbar (~> 3.0.1)
+  roo (~> 2.8.0)
   rspec-rails (~> 4.0)
   rubocop (~> 0.91.0)
   rubocop-performance (~> 1.7.1)
   rubocop-rails (~> 2.6.0)
   rubocop-rspec (~> 1.41.0)
+  rubyXL
   rvm1-capistrano3 (~> 1.4.0)
   sassc-rails (~> 2.1.2)
   savon (~> 2.12.1)
@@ -780,4 +788,4 @@ DEPENDENCIES
   wkhtmltopdf-binary (~> 0.12.4)
 
 BUNDLED WITH
-   1.17.2
+   1.17.3
