@@ -29,6 +29,9 @@ end
 worksheet[0][0].change_contents('document_type')
 worksheet[0][2].change_contents('date_of_birth')
 
+# insert postal_code column
+worksheet.insert_column(3)
+
 # Change document_type for its number
 documents_type = {
   'document_type' => 'document_type',
@@ -38,13 +41,17 @@ documents_type = {
 }
 
 worksheet.each_with_index do |cell, index|
-  index = index + 1
   if cell[0] && cell[0].value
     cell[0].change_contents(documents_type[cell[0].value])
   else
-    puts('document_type for row: ' + index.to_s + ' is empty')
+    puts('document_type for row: ' + (index + 1).to_s + ' is empty')
   end
+  # Set Postal Code Value
+  worksheet.add_cell(index, 3, '28410')
 end
+
+# Set Title for postal_code column
+worksheet.add_cell(0, 3, 'postal_code')
 
 # Create the file
 workbook.write('censo_municipal_formated.xlsx')

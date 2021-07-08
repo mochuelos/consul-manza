@@ -36,7 +36,10 @@ class Admin::LocalCensusToCsvController < Admin::BaseController
     end
     worksheet[0][0].change_contents('document_type')
     worksheet[0][2].change_contents('date_of_birth')
-    
+
+    # insert postal_code column
+    worksheet.insert_column(3)
+
     # Change document_type for its number
     documents_type = {
       'document_type' => 'document_type',
@@ -46,14 +49,17 @@ class Admin::LocalCensusToCsvController < Admin::BaseController
     }
     
     worksheet.each_with_index do |cell, index|
-      index = index + 1
       if cell[0] && cell[0].value
         cell[0].change_contents(documents_type[cell[0].value])
       else
-        # @errors.push('El index: ' + index.to_s + ' esta vacio')
-        @errors.push(t("admin.excel_to_csv.errors", index: index.to_s))
+        @errors.push(t("admin.excel_to_csv.errors", index: (index + 1).to_s))
       end
+      # Set Postal Code Value
+      worksheet.add_cell(index, 3, '28410')
     end
+
+    # Set Title for postal_code column
+    worksheet.add_cell(0, 3, 'postal_code')
 
     # return the csv file or return the template index
     if !@errors.empty? && params[:skip_blank] == 1.to_s
