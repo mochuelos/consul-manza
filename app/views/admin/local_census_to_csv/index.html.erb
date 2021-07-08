@@ -1,0 +1,15 @@
+<h1><%= t("admin.excel_to_csv.title") %></h1>
+<%= form_with url: {action: "create"} do |form| %>
+  <%= form.file_field :excel, {label: t("admin.excel_to_csv.file_field")} %>
+  <%= form.check_box :skip_blank, {label: t("admin.excel_to_csv.skip_blank")} %>
+  <%= form.submit t("admin.excel_to_csv.submit"), data: { disable_with: false } %>
+<% end %>
+
+<% if @errors %>
+  <h1>Hay valores en blanco</h1>
+  <ul>
+  <% @errors.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+<% end %>

@@ -258,6 +258,8 @@ namespace :admin do
   namespace :local_census_records do
     resources :imports, only: [:new, :create, :show]
   end
+
+  resources :local_census_to_csv, only: [:index, :create]
 end
 
 resolve "Milestone" do |milestone|

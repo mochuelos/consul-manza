@@ -340,6 +340,13 @@ class Admin::MenuComponent < ApplicationComponent
       ]
     end
 
+    def local_census_to_csv_link
+      [
+        t("admin.excel_to_csv.menu.link"),
+        admin_local_census_to_csv_index_path
+      ]
+    end
+
     def administrator_tasks_link
       [
         t("admin.menu.administrator_tasks"),
