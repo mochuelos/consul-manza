@@ -1,10 +1,7 @@
 en:
   admin:
     excel_to_csv:
-      skip_blank: Allow to donwload the file even if there are blank values
-      errors: The column %{index} has values in blank
       submit: Upload File
       file_field: Select the excel file
-      title: Excel to Csv
       menu:
         link: Transform Excel to CSV

@@ -1,10 +1,7 @@
 es:
   admin:
     excel_to_csv:
-      skip_blank: Permitir descargar el fichero incluso con valores en blanco
-      errors: La columna %{index} tiene valores en blanco
       submit: Subir Fichero
       file_field: Selecciona el fichero excel
-      title: Excel a Csv
       menu:
         link: Convertir Excel a CSV
