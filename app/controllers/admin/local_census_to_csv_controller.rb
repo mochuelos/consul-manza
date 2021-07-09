@@ -52,7 +52,7 @@ class Admin::LocalCensusToCsvController < Admin::BaseController
       if cell[0] && cell[0].value
         cell[0].change_contents(documents_type[cell[0].value])
       else
-        @errors.push(t("admin.excel_to_csv.errors", index: (index + 1).to_s))
+        @errors.push((index + 1).to_s)
       end
       # Set Postal Code Value
       worksheet.add_cell(index, 3, '28410')
@@ -61,14 +61,11 @@ class Admin::LocalCensusToCsvController < Admin::BaseController
     # Set Title for postal_code column
     worksheet.add_cell(0, 3, 'postal_code')
 
-    # return the csv file or return the template index
-    if !@errors.empty? && params[:skip_blank] == 1.to_s
-      xlsx = Roo::Excelx.new(workbook.stream)
-      csvStream = xlsx.to_csv() # return a StringIO if it doesn't have a filename as parameter
-      send_data(csvStream, {filename: 'censo.csv'})
-    else
-      render 'index'
-    end
+    # return the csv file
+    xlsx = Roo::Excelx.new(workbook.stream)
+    csv_stream = xlsx.to_csv() # return a StringIO if it doesn't have a filename as parameter
+    file_name = 'censo-' + Time.now.strftime("%Y-%m-%d")
+    send_data(csv_stream, {filename: file_name})
   end
 
 end

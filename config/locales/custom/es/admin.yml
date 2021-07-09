@@ -7,4 +7,4 @@ es:
       file_field: Selecciona el fichero excel
       title: Excel a Csv
       menu:
-        link: Censo Excel a Csv
+        link: Convertir Excel a CSV

@@ -7,4 +7,4 @@ en:
       file_field: Select the excel file
       title: Excel to Csv
       menu:
-        link: Census Excel to Csv
+        link: Transform Excel to CSV
