@@ -64,7 +64,7 @@ class Admin::LocalCensusToCsvController < Admin::BaseController
     # return the csv file
     xlsx = Roo::Excelx.new(workbook.stream)
     csv_stream = xlsx.to_csv() # return a StringIO if it doesn't have a filename as parameter
-    file_name = 'censo-' + Time.now.strftime("%Y-%m-%d")
+    file_name = 'censo-' + Time.now.strftime("%Y-%m-%d") + '.csv'
     send_data(csv_stream, {filename: file_name})
   end
 
