@@ -2,6 +2,16 @@
   <% track_event(category: "verification", action: "success_sms") %>
   <div class="small-12 column">
 
+    <% if @skip_level_two_verification %>
+    <div class="text-center">
+      <div class="small-4 column verification-step completed">
+        <span class="number">1</span> <%= t("verification.step_1") %>
+      </div>
+      <div class="small-4 column verification-step is-active">
+        <span class="number">2</span> <%= t("verification.step_3") %>
+      </div>
+    </div>
+    <% else %>
     <div class="text-center">
       <div class="small-4 column verification-step completed">
         <span class="number">1</span> <%= t("verification.step_1") %>
@@ -17,6 +27,7 @@
         <span class="meter" style="width: 100%"></span>
       </div>
     </div>
+    <% end %>
 
     <div class="small-12 medium-4 column">
 

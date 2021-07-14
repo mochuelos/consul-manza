@@ -1,7 +1,7 @@
 es:
   admin:
     excel_to_csv:
-      submit: Subir Fichero
+      submit: Convertir
       file_field: Selecciona el fichero excel
       menu:
         link: Convertir Excel a CSV

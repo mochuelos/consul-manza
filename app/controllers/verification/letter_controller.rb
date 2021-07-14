@@ -11,6 +11,7 @@ class Verification::LetterController < ApplicationController
 
   def new
     @letter = Verification::Letter.new(user: current_user)
+    @skip_level_two_verification = current_user.skip_level_two_verification?
   end
 
   def create
@@ -24,10 +25,12 @@ class Verification::LetterController < ApplicationController
 
   def edit
     @letter = Verification::Letter.new
+    @skip_level_two_verification = current_user.skip_level_two_verification?
   end
 
   def update
     @letter = Verification::Letter.new(letter_params.merge(user: current_user, verify: true))
+    @skip_level_two_verification = current_user.skip_level_two_verification?
     if @letter.valid?
       current_user.update!(verified_at: Time.current)
       redirect_to account_path, notice: t("verification.letter.update.flash.success")

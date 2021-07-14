@@ -6,10 +6,12 @@ class Verification::ResidenceController < ApplicationController
 
   def new
     @residence = Verification::Residence.new
+    @skip_level_two_verification = current_user.skip_level_two_verification?
   end
 
   def create
     @residence = Verification::Residence.new(residence_params.merge(user: current_user))
+    @skip_level_two_verification = current_user.skip_level_two_verification?
     if @residence.save
       redirect_to verified_user_path, notice: t("verification.residence.create.flash.success")
     else
