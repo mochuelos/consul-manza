@@ -2,7 +2,11 @@ require "rails_helper"
 
 describe Poll::BallotSheet do
   let(:ballot_sheet) do
-    build(:poll_ballot_sheet, poll: create(:poll),
+
+    budget = create(:budget)
+    create(:budget_investment, id: 1234, budget: budget)
+    create(:budget_investment, id: 5678, budget: budget)
+    build(:poll_ballot_sheet, poll: create(:poll, budget: budget),
           officer_assignment: create(:poll_officer_assignment),
           data: "1234;5678")
   end
@@ -38,7 +42,6 @@ describe Poll::BallotSheet do
     it "creates ballots for each document number" do
       poll = create(:poll, :for_budget)
       poll_ballot = create(:poll_ballot_sheet, poll: poll, data: "1,2,3;4,5,6")
-      poll_ballot.verify_ballots
 
       expect(Poll::Ballot.count).to eq(2)
       expect(Budget::Ballot.count).to eq(2)
